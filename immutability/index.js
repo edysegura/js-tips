@@ -1,8 +1,8 @@
 const snorlax = {
-    number: 143,
-    name: 'Snorlax',
-    type: 'Normal'
-}
+  number: 143,
+  name: 'Snorlax',
+  type: 'Normal'
+};
 
 Object.freeze(snorlax)
 
