@@ -4,5 +4,4 @@ The Object.freeze() method freezes an object preventing it from being changed, i
 
 ## References
 
-- [Link 1]()
-- [Link 2]()
+- [MDN Object.freeze()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze)
