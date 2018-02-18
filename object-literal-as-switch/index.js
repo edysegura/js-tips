@@ -27,7 +27,7 @@ function getErrorMessageLiteral(errorCode) {
     '002': 'Error message from code 002',
     '003': 'Error message from code 003',
     '004': 'Error message from code 004',
-    'default': 'No error message was found',
+    'default': 'No error message was found'
   }
   return errorMessages[errorCode] || errorMessages['default']
 }
