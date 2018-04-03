@@ -7,6 +7,7 @@ Some plain JavaScript tips that you may didn't know.
 - [Immutability](immutability)
 - [Tagged literal](tagged-literal)
 - [Replacing switch statements with Object literals](object-literal-as-switch)
+- [Destructuring with default arguments](destructuring-with-default-arguments)
 
 ---
 In case you have doubt why I'm not using semicolon is because I got inspiration from these talks:
