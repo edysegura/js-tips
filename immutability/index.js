@@ -1,3 +1,5 @@
+'use strict'
+
 const snorlax = {
   number: 143,
   name: 'Snorlax',
