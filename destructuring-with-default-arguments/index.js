@@ -1,11 +1,11 @@
 'use strict'
 
-function myFunction({ text = '', line = 0, truncate = 100} = {}) {
+function doSomething({ text = '', line = 0, truncate = 100} = {}) {
   console.log(text, line, truncate)
 }
 
-myFunction({
+doSomething({
   text: 'Edy Segura'
 })
 
-myFunction()
+doSomething()
