@@ -4,5 +4,10 @@ const myList = [1,2,3,4]
 console.log(myList)
 
 //removing the last two positions
-myList.length = 2
+const dropLastTwo = 2
+myList.length = dropLastTwo
+console.log(myList)
+
+//cleanning the list
+myList.length = 0
 console.log(myList)
