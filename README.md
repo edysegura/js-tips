@@ -9,6 +9,7 @@ Some plain JavaScript tips that you may didn't know.
 - [Replacing switch statements with Object literals](object-literal-as-switch)
 - [Destructuring with default arguments](destructuring-with-default-arguments)
 - [Password Generation](password-generation)
+- [Enums via proxies](enum-with-proxy)
 
 ---
 In case you have doubt why I'm not using semicolon is because I got inspiration from these talks:
