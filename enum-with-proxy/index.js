@@ -1,11 +1,8 @@
-const MyEnum = new Proxy(
-  {},
-  {
-    get(target, property, receiver) {
-      return property
-    }
+const MyEnum = new Proxy({}, {
+  get(target, property, receiver) {
+    return property
   }
-)
+})
 
 console.log(MyEnum.PropertyOne)
 console.log(MyEnum.PropertyTwo)
