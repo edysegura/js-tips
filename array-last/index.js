@@ -13,7 +13,8 @@ const names = [
 
 const [ firstOne ] = names
 
-//const lastOne = names[names.length - 1]
+// const lastOne = names[names.length - 1]
+// const [ lastOne ] = [...names].reverse()
 const lastOne = [...names].pop()
 
 console.log(`First one: ${firstOne}`)
