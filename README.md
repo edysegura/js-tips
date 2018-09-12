@@ -8,6 +8,7 @@ Some plain JavaScript tips that you may didn't know.
 - [Tagged literal](tagged-literal)
 - [Replacing switch statements with Object literals](object-literal-as-switch)
 - [Destructuring with default arguments](destructuring-with-default-arguments)
+- [Destructuring into properties](destructuring-into-properties)
 - [Password Generation](password-generation)
 - [Enums via proxies](enum-with-proxy)
 
