@@ -1,6 +1,7 @@
 const dataStructure = {
   a: null,
-  b: undefined
+  b: undefined,
+  c: 'any-value'
 }
 
 console.log('+null: ', +null)
