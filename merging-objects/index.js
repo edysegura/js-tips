@@ -5,7 +5,8 @@ const myFirstObject = {
 }
 
 const mySecondObject = {
-  propertyTwo: true
+  propertyTwo: true,
+  propertyFour: { hi: 5 }
 }
 
 const mergedObject = { ...myFirstObject, ...mySecondObject }
