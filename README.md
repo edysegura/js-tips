@@ -11,6 +11,7 @@ Some plain JavaScript tips that you may didn't know.
 - [Destructuring into properties](destructuring-into-properties)
 - [Password Generation](password-generation)
 - [Enums via proxies](enum-with-proxy)
+- [null vs undefined](null-vs-undefined)
 
 ---
 In case you have doubt why I'm not using semicolon is because I got inspiration from these talks:
