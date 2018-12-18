@@ -2,9 +2,9 @@
 
 // Reference: https://stackoverflow.com/a/47812770/1634092
 
-function getName(d){
+function getFunctionName(depthOfStack){
   const error = new Error();
-  const functionName = ((((error.stack.split('at ') || [])[1 + d] || '')
+  const functionName = ((((error.stack.split('at ') || [])[1 + depthOfStack] || '')
     .match(/(^|\.| <| )(.*[^(<])( \()/) || [])[2] || '')
     .split('.')
     .pop();
@@ -12,8 +12,8 @@ function getName(d){
 }
 
 function limbo() {
-  for (let i = 0; i < 4; i++) {
-    console.log(getName(i))
+  for (let depth = 0; depth < 4; depth++) {
+    console.log(getFunctionName(depth))
   }
 }
 
