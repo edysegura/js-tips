@@ -13,13 +13,15 @@ Some plain JavaScript tips that you may didn't know.
 - [Enums via proxies](enum-with-proxy)
 - [null vs undefined](null-vs-undefined)
 - [Merging Objects](merging-objects)
-- [Function Properties](function-properties) 
+- [Function Caller](function-caller)
+- [Function Properties](function-properties)
 
 ## References
 
 - [Little known features of JavaScript](https://blog.usejournal.com/little-known-features-of-javascript-901665291387)
 
 ---
+
 In case you have doubt why I'm not using semicolon is because I got inspiration from these talks:
 
 - [Semicolons cannot save you!](https://www.youtube.com/watch?v=Qlr-FGbhKaI)
