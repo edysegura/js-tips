@@ -2,12 +2,12 @@
 
 // Reference: https://stackoverflow.com/a/47812770/1634092
 
-function getFunctionName(depthOfStack){
-  const error = new Error();
+function getFunctionName(depthOfStack) {
+  const error = new Error()
   const functionName = ((((error.stack.split('at ') || [])[1 + depthOfStack] || '')
     .match(/(^|\.| <| )(.*[^(<])( \()/) || [])[2] || '')
     .split('.')
-    .pop();
+    .pop()
   return functionName
 }
 
