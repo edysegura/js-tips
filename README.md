@@ -13,6 +13,7 @@ Some plain JavaScript tips that you may didn't know.
 - [Enums via proxies](enum-with-proxy)
 - [null vs undefined](null-vs-undefined)
 - [Merging Objects](merging-objects)
+- [Function Properties](function-properties) 
 
 ## References
 
