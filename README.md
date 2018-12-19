@@ -18,6 +18,7 @@ Some plain JavaScript tips that you may didn't know.
 
 ## References
 
+- [15 HTML element methods you’ve potentially never heard of](https://hackernoon.com/15-html-element-methods-youve-potentially-never-heard-of-fc6863e41b2a)
 - [Little known features of JavaScript](https://blog.usejournal.com/little-known-features-of-javascript-901665291387)
 
 ---
