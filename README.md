@@ -15,6 +15,7 @@ Some plain JavaScript tips that you may didn't know.
 - [Merging Objects](merging-objects)
 - [Function Caller](function-caller)
 - [Function Properties](function-properties)
+- [Voice Recognition](voice-recognition)
 
 ## References
 
