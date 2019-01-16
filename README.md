@@ -16,6 +16,7 @@ Some plain JavaScript tips that you may didn't know.
 - [Function Caller](function-caller)
 - [Function Properties](function-properties)
 - [Voice Recognition](voice-recognition)
+- [Array with unique values](array-unique)
 
 ## References
 
