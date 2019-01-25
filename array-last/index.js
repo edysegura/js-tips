@@ -1,3 +1,5 @@
+'use strict'
+
 const names = [
   'Cloud Strife',
   'Tifa Lockhart',
