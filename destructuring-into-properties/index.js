@@ -1,3 +1,5 @@
+'use strict'
+
 const myObject = {}
 const person = { name: 'Edy' }
 
