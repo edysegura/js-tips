@@ -2,19 +2,19 @@
 
 function getErrorMessageSwitch(errorCode) {
   let errorMessage = ''
-  switch(errorCode) {
+  switch (errorCode) {
     case '001':
       errorMessage = 'Error message from code 001'
-    break
+      break
     case '002':
       errorMessage = 'Error message from code 002'
-    break
+      break
     case '003':
       errorMessage = 'Error message from code 003'
-    break
+      break
     case '004':
       errorMessage = 'Error message from code 004'
-    break
+      break
     default:
       errorMessage = 'No error message was found'
   }
@@ -27,9 +27,9 @@ function getErrorMessageLiteral(errorCode) {
     '002': 'Error message from code 002',
     '003': 'Error message from code 003',
     '004': 'Error message from code 004',
-    'default': 'No error message was found'
+    default: 'No error message was found'
   }
-  return errorMessages[errorCode] || errorMessages['default']
+  return errorMessages[ errorCode ] || errorMessages.default
 }
 
 console.log(getErrorMessageLiteral('004'))
