@@ -17,6 +17,7 @@ Some plain JavaScript tips that you may didn't know.
 - [Function Properties](function-properties)
 - [Voice Recognition](voice-recognition)
 - [Array with unique values](array-unique)
+- [Flattening Array](array-flattening)
 
 ## References
 
