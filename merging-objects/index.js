@@ -1,3 +1,5 @@
+'use strict'
+
 const myFirstObject = {
   propertyOne: 'value one',
   propertyTwo: false,
