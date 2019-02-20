@@ -1,3 +1,5 @@
+'use strict'
+
 const dataStructure = {
   a: null,
   b: undefined,
