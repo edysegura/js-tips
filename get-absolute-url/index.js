@@ -1,9 +1,9 @@
 const getAbsoluteUrl = (() => {
   let link;
 
-  return (url) => {
+  return (relativePath) => {
     if(!link) link = document.createElement('a')
-    link.href = url
+    link.href = relativePath
     return link.href
   }
 })()
