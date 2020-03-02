@@ -1,4 +1,4 @@
-class IdleTimer {
+export class IdleTimer {
 
   expirationTime = 1000 * 60 // one minute
   timer = null
