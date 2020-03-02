@@ -1,9 +1,17 @@
 class IdleTimer {
 
-  time = 1000 * 60 // one minute
+  expirationTime = 1000 * 60 // one minute
+  timer = null
 
   constructor(time) {
-    this.time = time || this.time
+    this.expirationTime = time || this.expirationTime
+    return this.setupIdleTimer()
+  }
+
+  setupIdleTimer() {
+    return new Promise((resolve) => {
+      this.timer = window.setTimeout(() => resolve('timeout'), this.expirationTime)
+    })
   }
 
 }
