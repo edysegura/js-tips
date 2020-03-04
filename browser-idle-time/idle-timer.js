@@ -27,16 +27,15 @@ export class IdleTimer {
 
   setupListeners() {
     const events = this.events
-
     // TODO implement debounce and event detach as well remove listener when timeout
-    const bindListener = (eventType) => {
-      document.addEventListener(eventType, () => {
-        console.count('bind')
-        this.resetTimer()
-      })
-    }
+    events.forEach(this.bindResetTrigger.bind(this))
+  }
 
-    events.forEach(bindListener)
+  bindResetTrigger(eventType) {
+    document.addEventListener(eventType, () => {
+      console.count('bind')
+      this.resetTimer()
+    })
   }
 
   setupTimeout() {
