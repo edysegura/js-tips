@@ -3,7 +3,14 @@ export class IdleTimer {
   expirationTime = 1000 * 5 // five seconds
   timer = null
   promiseResolve = null
-  events = ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart']
+
+  events = [
+    'keypress',
+    'mousedown',
+    'mousemove',
+    'scroll',
+    'touchstart'
+  ]
 
   constructor(time) {
     this.expirationTime = time || this.expirationTime
