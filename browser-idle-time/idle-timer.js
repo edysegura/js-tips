@@ -37,7 +37,7 @@ export class IdleTimer {
 
   removeListeners() {
     const events = this.events
-    events.forEach(eventType => document.addEventListener(eventType, this.eventHandler))
+    events.forEach(eventType => document.removeEventListener(eventType, this.eventHandler))
   }
 
   bindResetTrigger(eventType) {
@@ -48,7 +48,11 @@ export class IdleTimer {
   }
 
   setupTimeout() {
-    const triggerTimeout = () => this.promiseResolve('timeout')
+    const triggerTimeout = () => {
+      this.promiseResolve('----> Timeout!')
+      this.removeListeners()
+    }
+
     this.timer = window.setTimeout(triggerTimeout, this.expirationTime)
   }
 
