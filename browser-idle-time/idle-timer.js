@@ -12,6 +12,11 @@ export class IdleTimer {
     'touchstart'
   ]
 
+  eventHandler = (event) => {
+    console.count(event.type)
+    this.resetTimer()
+  }
+
   constructor(time) {
     this.expirationTime = time || this.expirationTime
     return this.setupIdleTimer()
@@ -27,8 +32,12 @@ export class IdleTimer {
 
   setupListeners() {
     const events = this.events
-    // TODO implement debounce and event detach as well remove listener when timeout
-    events.forEach(this.bindResetTrigger.bind(this))
+    events.forEach(eventType => document.addEventListener(eventType, this.eventHandler))
+  }
+
+  removeListeners() {
+    const events = this.events
+    events.forEach(eventType => document.addEventListener(eventType, this.eventHandler))
   }
 
   bindResetTrigger(eventType) {
