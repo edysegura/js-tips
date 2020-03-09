@@ -8,4 +8,9 @@ function alphaRandom(stringLength) {
   return text;
 }
 
-console.log(alphaRandom(32))
+const button = document.querySelector('button')
+const output = document.querySelector('output')
+
+button.addEventListener('click', () => {
+  output.textContent = alphaRandom('32')
+})
