@@ -6,5 +6,6 @@ function showExpiredMessage(data) {
   p.classList.add('expired')
 }
 
-new IdleTimer()
+const fiveSeconds = 5000
+new IdleTimer(fiveSeconds)
   .then(showExpiredMessage)
