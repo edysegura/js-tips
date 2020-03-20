@@ -1,6 +1,6 @@
 export class IdleTimer {
 
-  expirationTime = 1000 * 5 // five seconds
+  expirationTime = 1000 * 60 // one minute
   timer = null
   promiseResolve = null
 
