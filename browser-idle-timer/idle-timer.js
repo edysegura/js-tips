@@ -49,7 +49,7 @@ export class IdleTimer {
 
   setupTimeout() {
     const triggerTimeout = () => {
-      this.promiseResolve('----> Timeout!')
+      this.promiseResolve(Date.now())
       this.removeListeners()
     }
 
