@@ -41,7 +41,7 @@ export class IdleTimer {
   }
 
   removeListeners() {
-    // TODO need to be fixed
+    // FIXME It is not really removing the listeners
     const events = this.events
     events.forEach(eventType => document.removeEventListener(eventType, this.eventHandler()))
   }
