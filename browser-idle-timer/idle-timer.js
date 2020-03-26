@@ -41,6 +41,7 @@ export class IdleTimer {
   }
 
   removeListeners() {
+    // TODO need to be fixed
     const events = this.events
     events.forEach(eventType => document.removeEventListener(eventType, this.eventHandler()))
   }
