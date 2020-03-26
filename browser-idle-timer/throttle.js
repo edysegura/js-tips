@@ -5,7 +5,7 @@
  */
 export function throttle(action, delay) {
   let timerId
-  return (...params) => {
+  return function throttler (...params) {
     if (timerId) return
     timerId = setTimeout(() => {
       action(...params)
