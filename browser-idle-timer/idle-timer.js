@@ -1,3 +1,5 @@
+import { throttle } from './throttle.js';
+
 export class IdleTimer {
 
   expirationTime = 1000 * 60 // one minute
@@ -12,9 +14,12 @@ export class IdleTimer {
     'touchstart'
   ]
 
-  eventHandler = (event) => {
-    console.count(event.type)
-    this.resetTimer()
+  eventHandler = () => {
+    const delay = 400
+    return throttle((event) => {
+      console.count(event.type)
+      this.resetTimer()
+    }, delay)
   }
 
   constructor(time) {
@@ -32,12 +37,12 @@ export class IdleTimer {
 
   setupListeners() {
     const events = this.events
-    events.forEach(eventType => document.addEventListener(eventType, this.eventHandler))
+    events.forEach(eventType => document.addEventListener(eventType, this.eventHandler()))
   }
 
   removeListeners() {
     const events = this.events
-    events.forEach(eventType => document.removeEventListener(eventType, this.eventHandler))
+    events.forEach(eventType => document.removeEventListener(eventType, this.eventHandler()))
   }
 
   bindResetTrigger(eventType) {
