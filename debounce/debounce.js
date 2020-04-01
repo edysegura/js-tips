@@ -1,5 +1,5 @@
 /**
- * 
+ * It limits the rate at which a function can fire
  * @param {Function} action
  * @param {Number} wait
  */
