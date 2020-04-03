@@ -1,7 +1,11 @@
-import { debounce } from "./debounce.js";
+import { debounce } from "./debounce.js"
 
-const myAction = debounce(() => console.log('Now its time!'), 500)
+const input = document.querySelector('input')
+const output = document.querySelector('output')
+const wait = 1000 // one second in milliseconds
 
-for (let i = 0; i < 1000; i++) {
-  myAction()
-}
+const efficientEventHandler = debounce((event) => {
+  output.textContent = event.target.value
+}, wait)
+
+input.addEventListener('input', efficientEventHandler)
