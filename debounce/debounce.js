@@ -5,9 +5,11 @@
  */
 export function debounce(action, wait) {
   let timer = null
-  return function () {
+  return function (...params) {
     clearTimeout(timer)
-    // TODO we need to consider the arguments
-    timer = setTimeout(action, wait)
+    timer = setTimeout(
+      () => action(...params),
+      wait
+    )
   }
 }
