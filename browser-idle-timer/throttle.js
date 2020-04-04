@@ -1,15 +1,15 @@
 /**
  * Exectue an action which needs to be throttled
  * @param { Function } action it is the function that need to be throttled
- * @param { number } delay the time interval in milliseconds
+ * @param { number } wait the wait in milliseconds
  */
-export function throttle(action, delay) {
+export function throttle(action, wait) {
   let timerId
   return (...params) => {
     if (timerId) return
     timerId = setTimeout(() => {
       action(...params)
       timerId = null
-    }, delay)
+    }, wait)
   }
 }
