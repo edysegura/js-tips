@@ -3,8 +3,9 @@ import { throttle } from './throttle.js';
 export class IdleTimer {
 
   expirationTime = 1000 * 60 // one minute
-  timer = null
+  eventHandler = null
   promiseResolve = null
+  timer = null
 
   events = [
     'keypress',
@@ -14,17 +15,18 @@ export class IdleTimer {
     'touchstart'
   ]
 
-  eventHandler = () => {
-    const delay = 400
+  constructor(time) {
+    this.expirationTime = time || this.expirationTime
+    this.eventHandler = this.createEventHandler()
+    return this.setupIdleTimer()
+  }
+
+  createEventHandler() {
+    const wait = 400
     return throttle((event) => {
       console.count(event.type)
       this.resetTimer()
-    }, delay)
-  }
-
-  constructor(time) {
-    this.expirationTime = time || this.expirationTime
-    return this.setupIdleTimer()
+    }, wait)
   }
 
   setupIdleTimer() {
@@ -37,13 +39,12 @@ export class IdleTimer {
 
   setupListeners() {
     const events = this.events
-    events.forEach(eventType => document.addEventListener(eventType, this.eventHandler()))
+    events.forEach(eventType => document.addEventListener(eventType, this.eventHandler))
   }
 
   removeListeners() {
-    // FIXME It is not really removing the listeners
     const events = this.events
-    events.forEach(eventType => document.removeEventListener(eventType, this.eventHandler()))
+    events.forEach(eventType => document.removeEventListener(eventType, this.eventHandler))
   }
 
   bindResetTrigger(eventType) {
