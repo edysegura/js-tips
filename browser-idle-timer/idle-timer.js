@@ -1,4 +1,4 @@
-import { throttle } from './throttle.js';
+import { throttle } from './throttle.js'
 
 export class IdleTimer {
 
@@ -49,7 +49,6 @@ export class IdleTimer {
 
   bindResetTrigger(eventType) {
     document.addEventListener(eventType, () => {
-      console.count('bind')
       this.resetTimer()
     })
   }
