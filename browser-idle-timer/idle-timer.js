@@ -60,7 +60,7 @@ export class IdleTimer {
 
   setupTimeout() {
     this.timer = window.setTimeout(
-      this.triggerTimeout.bind(this),
+      () => this.triggerTimeout(),
       this.expirationTime
     )
   }
