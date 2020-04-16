@@ -53,13 +53,16 @@ export class IdleTimer {
     })
   }
 
-  setupTimeout() {
-    const triggerTimeout = () => {
-      this.promiseResolve(Date.now())
-      this.removeListeners()
-    }
+  triggerTimeout() {
+    this.promiseResolve(Date.now())
+    this.removeListeners()
+  }
 
-    this.timer = window.setTimeout(triggerTimeout, this.expirationTime)
+  setupTimeout() {
+    this.timer = window.setTimeout(
+      this.triggerTimeout.bind(this),
+      this.expirationTime
+    )
   }
 
   resetTimer() {
