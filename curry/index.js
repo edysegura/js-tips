@@ -12,5 +12,5 @@ function validation(mode, threshold) {
 const max = validation('Max', 21)
 const min = validation('Min', 18)
 
-console.log(max(12))
-console.log(max(22))
+console.log('12 > 21 =', max(12))
+console.log('22 > 21 =', max(22))
