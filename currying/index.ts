@@ -1,3 +1,4 @@
+// deno run index.ts
 
 function validation(mode: 'Max' | 'Min', threshold: number): Function {
   if (mode === 'Max') {
