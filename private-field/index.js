@@ -10,5 +10,5 @@ class MyClass {
   }
 }
 
-console.log(new MyClass().getMyField())
+console.log(new MyClass().getMyField()) // Edy Segura
 console.log(new MyClass().myField) // undefined
