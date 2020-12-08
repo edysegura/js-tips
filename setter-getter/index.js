@@ -18,5 +18,5 @@ language.current = 'PT-BR'
 language.current = 'JP'
 language.current = 'EN-US'
 
-console.log('Current Language: ', language.current)
-console.log(language.log)
+console.log('Current Language: ', language.current) // EN-US
+console.log(language.log) // [ 'PT-BR', 'JP', 'EN-US' ]
