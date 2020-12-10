@@ -1,8 +1,11 @@
+/**
+ * This example works on Node.js v14+
+ */
 class Component {
-  timeslice_ = 22
+  #timeslice = 22
 
   get timeslice() {
-    return this.timeslice_
+    return this.#timeslice
   }
 
 }
