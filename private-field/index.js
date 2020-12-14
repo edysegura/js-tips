@@ -10,5 +10,6 @@ class MyClass {
   }
 }
 
-console.log(new MyClass().getMyField()) // Edy Segura
-console.log(new MyClass().myField) // undefined
+const myObject = new MyClass()
+console.log(myObject.getMyField()) // Edy Segura
+console.log(myObject['#myField']) // undefined
