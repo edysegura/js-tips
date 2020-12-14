@@ -1,15 +1,19 @@
 class MyClass {
-  #myField
+  myPublicField
+  #myPrivateField
 
   constructor() {
-    this.#myField = 'Edy Segura'
+    this.myPublicField = 'This is public'
+    this.#myPrivateField = 'This is private'
   }
 
-  getMyField() {
-    return this.#myField
+  getMyPrivateField() {
+    return this.#myPrivateField
   }
 }
 
 const myObject = new MyClass()
-console.log(myObject.getMyField()) // Edy Segura
+console.log(myObject.myPublicField) // this is public
+console.log(myObject.getMyPrivateField()) // this is private
 console.log(myObject['#myField']) // undefined
+console.log(myObject) // MyClass { myPublicField: 'This is public' }
