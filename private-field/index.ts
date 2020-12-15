@@ -1,15 +1,15 @@
 class Person {
-  private myField: string
+  private name: string
 
   constructor() {
-    this.myField = 'Edy Segura'
+    this.name = 'Edy Segura'
   }
 
-  getMyField(): string {
-    return this.myField
+  getName(): string {
+    return this.name
   }
 }
 
 const person = new Person()
-console.log(person.getMyField()) // Edy Segura
-console.log(person.myField) // undefined
+console.log(person.getName()) // Edy Segura
+console.log(person.name) // undefined
