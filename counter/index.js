@@ -6,3 +6,8 @@ function updateUI(counter) {
 }
 
 updateUI(0)
+
+let counter = 0
+setInterval(() => {
+  updateUI(counter++)
+}, 1000)
