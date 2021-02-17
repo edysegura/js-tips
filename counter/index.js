@@ -10,6 +10,9 @@ function updateUI(counter) {
  *
  * Most of counters loose accuracy over time! That is why of the implementation below
  * check more details on this link: https://www.youtube.com/watch?v=MCi6AZMkxcU
+ *
+ * v1 regular counter
+ * v2 using object Date to be in sync
  */
 const start = Date.now()
 const delay = 1000
