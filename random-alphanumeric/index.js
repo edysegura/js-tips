@@ -1,10 +1,10 @@
 'use strict'
 
-function alphaRandom(stringLength) {
-  const possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789"
+function alphaRandom(length = 36) {
+  const possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
   let text = ""
 
-  for (let i = 0; i < stringLength; i++) {
+  for (let i = 0; i < length; i++) {
     text += possible.charAt(Math.floor(Math.random() * possible.length))
   }
 
@@ -15,5 +15,5 @@ const button = document.querySelector('button')
 const output = document.querySelector('output')
 
 button.addEventListener('click', () => {
-  output.textContent = alphaRandom('32')
+  output.textContent = alphaRandom()
 })
