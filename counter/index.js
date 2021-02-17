@@ -1,8 +1,8 @@
 'use strict'
 
-function updateUI(counter) {
+function updateUI(second) {
   const output = document.querySelector('output')
-  output.textContent = counter
+  output.textContent = second
 }
 
 /**
@@ -13,12 +13,13 @@ function updateUI(counter) {
  *
  * v1 regular counter
  * v2 using object Date to be in sync
+ * v3 using requestAnimationFrame
  */
 const start = Date.now()
-const delay = 1000
-
-setInterval(() => {
+function frame() {
   const elapsed = Date.now() - start
   const seconds = Math.floor(elapsed / 1000)
   updateUI(seconds)
-}, delay)
+  requestAnimationFrame(frame)
+}
+frame()
