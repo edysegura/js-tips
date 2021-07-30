@@ -1,15 +1,17 @@
+// 'use strict'
+
 /**
  * This example works on Node.js v14+
  */
 class Component {
-  #timeslice = 22
+  #timeSlice = 22
 
-  get timeslice() {
-    return this.#timeslice
+  get timeSlice() {
+    return this.#timeSlice
   }
 
 }
 
 const component = new Component()
-component.timeslice = 23
-console.log(component.timeslice) // 22
+component.timeSlice = 23
+console.log(component.timeSlice) // 22
