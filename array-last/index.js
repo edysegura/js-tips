@@ -1,14 +1,14 @@
 const names = [
-  'Cloud Strife',
-  'Tifa Lockhart',
   'Aerith Gainsborough',
   'Barret Wallace',
-  'Yuffie Kisaragi',
-  'Vincent Valentine',
-  'Zack Fair',
-  'Red XIII',
   'Cait Sith',
-  'Cid Highwind'
+  'Cid Highwind',
+  'Cloud Strife',
+  'Red XIII',
+  'Tifa Lockhart',
+  'Vincent Valentine',
+  'Yuffie Kisaragi',
+  'Zack Fair',
 ]
 
 const [ firstOne ] = names
