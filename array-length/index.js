@@ -3,9 +3,9 @@
 const myList = [ 1, 2, 3, 4 ]
 console.log(myList)
 
-// removing the last two positions
-const dropLastTwo = 2
-myList.length = dropLastTwo
+// removing the last one
+const dropLastOne = 3
+myList.length = dropLastOne
 console.log(myList)
 
 // cleaning the list
