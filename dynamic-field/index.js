@@ -4,5 +4,5 @@ function objectify(fieldName, value) {
   }
 }
 
-console.log(objectify('name', 'Edy Segura'))
-console.log(objectify('email', 'email@domain.com'))
+console.log(objectify('name', 'Edy Segura')) // { name: 'Edy Segura' }
+console.log(objectify('email', 'email@domain.com')) // { email: 'email@domain.com' }
