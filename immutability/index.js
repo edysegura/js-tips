@@ -5,8 +5,8 @@ const snorlax = {
   name: 'Snorlax',
   type: 'Normal',
   evolution: {
-    munchlax: '446'
-  }
+    munchlax: '446',
+  },
 }
 
 // Object.freeze() - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze
