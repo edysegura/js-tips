@@ -11,5 +11,4 @@ function showExpiredMessage(data) {
 }
 
 const fiveSeconds = 5000
-new IdleTimer(fiveSeconds)
-  .then(showExpiredMessage)
+new IdleTimer(fiveSeconds).then(showExpiredMessage)

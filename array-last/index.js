@@ -11,8 +11,8 @@ const names = [
   'Zack Fair',
 ]
 
-const [ firstOne ] = names
-const lastOne = names[ names.length - 1 ]
+const [firstOne] = names
+const lastOne = names[names.length - 1]
 // const lastOne = names.at(-1) // available at Node.js v17+
 
 // const [ lastOne ] = [...names].reverse()

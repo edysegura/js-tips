@@ -1,19 +1,12 @@
 import { throttle } from './throttle.js'
 
 export class IdleTimer {
-
   expirationTime = 1000 * 60 // one minute
   eventHandler = null
   promiseResolve = null
   timer = null
 
-  events = [
-    'keypress',
-    'mousedown',
-    'mousemove',
-    'scroll',
-    'touchstart'
-  ]
+  events = ['keypress', 'mousedown', 'mousemove', 'scroll', 'touchstart']
 
   constructor(time) {
     this.expirationTime = time || this.expirationTime
@@ -39,12 +32,16 @@ export class IdleTimer {
 
   setupListeners() {
     const events = this.events
-    events.forEach(eventType => document.addEventListener(eventType, this.eventHandler))
+    events.forEach((eventType) =>
+      document.addEventListener(eventType, this.eventHandler),
+    )
   }
 
   removeListeners() {
     const events = this.events
-    events.forEach(eventType => document.removeEventListener(eventType, this.eventHandler))
+    events.forEach((eventType) =>
+      document.removeEventListener(eventType, this.eventHandler),
+    )
   }
 
   bindResetTrigger(eventType) {
@@ -61,7 +58,7 @@ export class IdleTimer {
   setupTimeout() {
     this.timer = window.setTimeout(
       () => this.triggerTimeout(),
-      this.expirationTime
+      this.expirationTime,
     )
   }
 
@@ -69,5 +66,4 @@ export class IdleTimer {
     window.clearTimeout(this.timer)
     this.setupTimeout()
   }
-
 }
