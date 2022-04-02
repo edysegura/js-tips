@@ -1,7 +1,7 @@
 'use strict'
 
 const MyEnum = new Proxy({}, {
-  get(target, property, receiver) {
+  get(_, property) {
     return property
   }
 })
