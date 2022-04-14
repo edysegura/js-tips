@@ -1,9 +1,8 @@
 // it doesn't work on strict mode
-// 'use strict'
 
 function one() {
   console.log('Function one was called')
-  console.log('This function was called by: ', one.caller.name)
+  console.log('This function was called by:', one.caller.name)
 }
 
 function two() {
@@ -11,4 +10,10 @@ function two() {
   one()
 }
 
-two()
+function three() {
+  console.log('Function three was called')
+  one()
+  two()
+}
+
+three()
