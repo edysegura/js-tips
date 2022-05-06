@@ -16,7 +16,7 @@ export class IdleTimer {
 
   createEventHandler() {
     const wait = 400
-    return throttle((event) => {
+    return throttle(() => {
       this.resetTimer()
     }, wait)
   }
