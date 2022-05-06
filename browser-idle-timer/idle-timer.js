@@ -17,7 +17,6 @@ export class IdleTimer {
   createEventHandler() {
     const wait = 400
     return throttle((event) => {
-      console.count(event.type)
       this.resetTimer()
     }, wait)
   }
