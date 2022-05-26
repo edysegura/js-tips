@@ -6,4 +6,5 @@ const slugify = (string) =>
     .replace(/[\s_-]+/g, '-')
     .replace(/^-+|-+$/g, '')
 
-console.log(slugify('Hello World!')) // 'hello-world'
+const string = 'This is a long text:'
+console.log(string, slugify(string)) // 'this-is-a-long-text'
