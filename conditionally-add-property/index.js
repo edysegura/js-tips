@@ -1,9 +1,10 @@
 const trueCondition = true
 const falseCondition = false
 
-const obj = {
+const animalsSound = {
+  cows: 'moo',
   ...(trueCondition && { dogs: 'woof' }),
   ...(falseCondition && { cats: 'meow' }),
 }
 
-console.log({ obj }) // { dogs: 'woof' }
+console.log({ animalsSound }) // { dogs: 'woof' }
