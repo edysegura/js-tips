@@ -1,5 +1,5 @@
 const getAbsoluteUrl = (() => {
-  let link;
+  let link
 
   return (relativePath = '') => {
     if (!link) link = document.createElement('a')
