@@ -1,5 +1,5 @@
 /**
- * Exectue an action which needs to be throttled
+ * Execute an action which needs to be throttled
  * @param { Function } action An action to be performed that need to be throttled
  * @param { number } wait Time in milliseconds to wait before perform the action
  */
