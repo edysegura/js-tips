@@ -1,6 +1,6 @@
 function objectify(fieldName, value) {
   return {
-    [ fieldName ]: value
+    [fieldName]: value,
   }
 }
 
