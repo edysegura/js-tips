@@ -14,6 +14,8 @@ const output = document.querySelector('output')
 
 const buildAbsoluteUrl = () => {
   output.textContent = getAbsoluteUrl(input.value)
+  const { protocol, host } = document.location
+  output.innerHTML += `<br />${protocol}//${host}${input.value}`
 }
 
 button.addEventListener('click', buildAbsoluteUrl)
