@@ -1,5 +1,5 @@
-const currentValues = [1, 2, 3]
-const newValues = [4, 2]
-const diff1 = currentValues.filter((cv) => newValues.includes(cv))
-const diff2 = newValues.filter((nv) => !currentValues.includes(nv))
-console.log({ diff1, diff2 })
+const currentValues = [1, 2, 3, 6]
+const newValues = [1, 2, 4, 5]
+const toRemove = currentValues.filter((cv) => !newValues.includes(cv))
+const toAdd = newValues.filter((nv) => !currentValues.includes(nv))
+console.log({ toRemove, toAdd })
