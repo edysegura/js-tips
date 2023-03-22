@@ -14,13 +14,13 @@ function countDownTimer(deadline) {
   }
 }
 
-// const deadline = '2023-02-01'
 const dayAfterTomorrow = Date.now() + 48 * 60 * 60 * 1000
 const deadline = new Date(dayAfterTomorrow)
+
 function update() {
   const timer = countDownTimer(deadline)
   const output = document.querySelector('p')
-  output.innerHTML = `${timer.days} days, ${timer.hours} hours, ${timer.minutes} minutes, and ${timer.seconds} seconds left`
+  output.textContent = `${timer.days} day(s), ${timer.hours} hours, ${timer.minutes} minutes, and ${timer.seconds} seconds left`
 }
 
 update()
