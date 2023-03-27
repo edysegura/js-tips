@@ -20,7 +20,7 @@ const deadline = new Date(dayAfterTomorrow)
 function update() {
   const timer = countDownTimer(deadline)
   const output = document.querySelector('p')
-  output.textContent = `${timer.days} day(s), ${timer.hours} hours, ${timer.minutes} minutes, and ${timer.seconds} seconds left`
+  output.textContent = `${timer.days} day(s), ${timer.hours} hour(s), ${timer.minutes} minute(s), and ${timer.seconds} second(s) left`
 }
 
 update()
