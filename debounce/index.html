@@ -4,18 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Debounce Pattern</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
     <script src="app.js" type="module"></script>
   </head>
   <body>
-    <h1>Debounce Pattern</h1>
-    <p>
-      A debounce pattern is essential to ensuring a given task doesn't fire so
-      often that it bricks browser performance.
-    </p>
-    <input type="text" placeholder="Type something here!" autofocus />
-    <p>
-      <output></output>
-      * It will appear here after 1 second
-    </p>
+    <main>
+      <section>
+        <header>
+          <h1>Debounce Pattern</h1>
+          <p>
+            A debounce pattern is essential to ensuring a given task doesn't
+            fire so often that it bricks browser performance.
+          </p>
+        </header>
+        <article>
+          <label for="debounce-input">
+            Input
+            <input
+              id="debounce-input"
+              type="text"
+              placeholder="Type something here!"
+              autofocus
+            />
+          </label>
+          <div>
+            <strong>Output:</strong>
+            <output></output>
+            <small>* It will appear here after 1 second</small>
+          </div>
+        </article>
+      </section>
+    </main>
   </body>
 </html>
