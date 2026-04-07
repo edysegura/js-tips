@@ -5,9 +5,118 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Countdown Timer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 1rem;
+      }
+
+      main {
+        width: 100%;
+        max-width: 600px;
+      }
+
+      .timer-display {
+        font-size: clamp(2rem, 8vw, 4rem);
+        font-weight: bold;
+        text-align: center;
+        margin: 2rem 0;
+        font-family: 'Courier New', monospace;
+        letter-spacing: 0.1em;
+      }
+
+      .controls {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .controls button {
+        flex: 1;
+        min-width: 120px;
+      }
+
+      .input-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      @media (max-width: 576px) {
+        .timer-display {
+          font-size: clamp(1.5rem, 6vw, 3rem);
+        }
+
+        .input-group {
+          grid-template-columns: 1fr;
+        }
+
+        .controls {
+          flex-direction: column;
+        }
+
+        .controls button {
+          min-width: unset;
+        }
+      }
+    </style>
     <script src="app.js" defer></script>
   </head>
   <body>
-    <p>Result will be updated here!</p>
+    <main>
+      <article>
+        <hgroup>
+          <h1>Countdown Timer</h1>
+          <h2>Set your timer and countdown</h2>
+        </hgroup>
+
+        <div class="input-group">
+          <div>
+            <label for="minutes">
+              Minutes
+              <input
+                type="number"
+                id="minutes"
+                min="0"
+                max="99"
+                value="1"
+                placeholder="0"
+              />
+            </label>
+          </div>
+          <div>
+            <label for="seconds">
+              Seconds
+              <input
+                type="number"
+                id="seconds"
+                min="0"
+                max="59"
+                value="0"
+                placeholder="0"
+              />
+            </label>
+          </div>
+        </div>
+
+        <div class="timer-display" id="timer">01:00</div>
+
+        <div class="controls">
+          <button id="startBtn" onclick="startTimer()">Start</button>
+          <button id="pauseBtn" onclick="pauseTimer()" disabled>Pause</button>
+          <button id="resetBtn" onclick="resetTimer()">Reset</button>
+        </div>
+
+        <p id="result" style="text-align: center; margin-top: 2rem; font-style: italic;">
+          Result will be updated here!
+        </p>
+      </article>
+    </main>
   </body>
 </html>
