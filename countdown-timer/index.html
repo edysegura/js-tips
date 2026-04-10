@@ -5,67 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Countdown Timer</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
-    <style>
-      body {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        padding: 1rem;
-      }
-
-      main {
-        width: 100%;
-        max-width: 600px;
-      }
-
-      .timer-display {
-        font-size: clamp(2rem, 8vw, 4rem);
-        font-weight: bold;
-        text-align: center;
-        margin: 2rem 0;
-        font-family: 'Courier New', monospace;
-        letter-spacing: 0.1em;
-      }
-
-      .controls {
-        display: flex;
-        gap: 1rem;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      .controls button {
-        flex: 1;
-        min-width: 120px;
-      }
-
-      .input-group {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-        margin-bottom: 1.5rem;
-      }
-
-      @media (max-width: 576px) {
-        .timer-display {
-          font-size: clamp(1.5rem, 6vw, 3rem);
-        }
-
-        .input-group {
-          grid-template-columns: 1fr;
-        }
-
-        .controls {
-          flex-direction: column;
-        }
-
-        .controls button {
-          min-width: unset;
-        }
-      }
-    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
     <script src="app.js" defer></script>
   </head>
   <body>
@@ -113,9 +57,7 @@
           <button id="resetBtn" onclick="resetTimer()">Reset</button>
         </div>
 
-        <p id="result" style="text-align: center; margin-top: 2rem; font-style: italic;">
-          Result will be updated here!
-        </p>
+        <p id="result">Result will be updated here!</p>
       </article>
     </main>
   </body>
