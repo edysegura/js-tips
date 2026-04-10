@@ -7,11 +7,11 @@ function generator() {
   return ++generator.counter
 }
 
-console.log(generator())
-console.log(generator())
-console.log(generator())
-console.log(generator())
-console.log(Object.keys(generator))
+console.log('Method 1: ' + generator())
+console.log('Method 1: ' + generator())
+console.log('Method 1: ' + generator())
+console.log('Method 1: ' + generator())
+console.log('Method 1: ' + Object.keys(generator))
 
 // -----------------------------------------
 
@@ -24,9 +24,9 @@ function generator2() {
   return ++generator2[counterSymbol]
 }
 
-console.log(generator2())
-console.log(generator2())
-console.log(Object.keys(generator2))
+console.log('Method 2: ' + generator2())
+console.log('Method 2: ' + generator2())
+console.log('Method 2: ' + Object.keys(generator2))
 
 // -----------------------------------------
 
@@ -35,6 +35,6 @@ const generator3 = (() => {
   return () => ++counter
 })()
 
-console.log(generator3()) // 1
-console.log(generator3()) // 2
+console.log('Method 3: ' + generator3()) // 1
+console.log('Method 3: ' + generator3()) // 2
 // counter is completely inaccessible
