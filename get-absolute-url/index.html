@@ -18,7 +18,7 @@
           <h1>Get Absolute URL</h1>
           <h2>Convert relative paths to absolute URLs</h2>
         </hgroup>
-        <form onsubmit="return false">
+        <form method="post">
           <label for="relative-path">
             Relative Path
             <input
@@ -28,12 +28,7 @@
               value="/relative-path"
             />
           </label>
-          <button
-            type="button"
-            onclick="document.querySelector('button').click()"
-          >
-            Get absolute URL
-          </button>
+          <button type="button">Get absolute URL</button>
         </form>
         <section>
           <label>Result:</label>
