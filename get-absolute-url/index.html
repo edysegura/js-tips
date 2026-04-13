@@ -5,13 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Get the absolute URL</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
     <script src="app.js" defer></script>
   </head>
   <body>
-    <div>
-      <input type="text" placeholder="relative path" value="/relative-path" />
-      <button>Get absolute URL</button>
-    </div>
-    <output></output>
+    <main class="container">
+      <article>
+        <hgroup>
+          <h1>Get Absolute URL</h1>
+          <h2>Convert relative paths to absolute URLs</h2>
+        </hgroup>
+        <form onsubmit="return false">
+          <label for="relative-path">
+            Relative Path
+            <input
+              type="text"
+              id="relative-path"
+              placeholder="/relative-path"
+              value="/relative-path"
+            />
+          </label>
+          <button
+            type="button"
+            onclick="document.querySelector('button').click()"
+          >
+            Get absolute URL
+          </button>
+        </form>
+        <section>
+          <label>Result:</label>
+          <output></output>
+        </section>
+      </article>
+    </main>
   </body>
 </html>
