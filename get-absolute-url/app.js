@@ -8,13 +8,16 @@ const getAbsoluteUrl = (() => {
 })()
 
 const input = document.querySelector('input')
-const button = document.querySelector('button')
+const form = document.querySelector('form')
 const output = document.querySelector('output')
 
 const buildAbsoluteUrl = () => {
-  output.textContent = getAbsoluteUrl(input.value)
+  output.textContent = `Link trick: ${getAbsoluteUrl(input.value)}`
   const { protocol, host } = document.location
-  output.innerHTML += `<br />${protocol}//${host}${input.value}`
+  output.innerHTML += `<br /><code>document.location</code>: ${protocol}//${host}${input.value}`
 }
 
-button.addEventListener('click', buildAbsoluteUrl)
+form.addEventListener('submit', (e) => {
+  e.preventDefault()
+  buildAbsoluteUrl()
+})
