@@ -19,16 +19,15 @@
           <h2>Convert relative paths to absolute URLs</h2>
         </hgroup>
         <form method="post">
-          <label for="relative-path">
-            Relative Path
+          <fieldset role="group">
             <input
-              type="text"
               id="relative-path"
+              type="text"
               placeholder="/relative-path"
-              value="/relative-path"
+              autocomplete="off"
             />
-          </label>
-          <button type="submit">Get absolute URL</button>
+            <input type="submit" value="Get absolute URL" />
+          </fieldset>
         </form>
         <section>
           <label>Result:</label>
