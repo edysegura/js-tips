@@ -1,4 +1,8 @@
-const getAbsoluteUrl = (() => {
+const input = document.querySelector('input')
+const form = document.querySelector('form')
+const output = document.querySelector('output')
+
+const getAbsoluteUrlLinkHack = (() => {
   let link
   return (relativePath = '') => {
     if (!link) link = document.createElement('a')
@@ -7,17 +11,27 @@ const getAbsoluteUrl = (() => {
   }
 })()
 
-const input = document.querySelector('input')
-const form = document.querySelector('form')
-const output = document.querySelector('output')
-
-const buildAbsoluteUrl = () => {
-  output.textContent = `Link trick: ${getAbsoluteUrl(input.value)}`
+const getAbsoluteUrlDocument = (relativePath = '') => {
   const { protocol, host } = document.location
-  output.innerHTML += `<br /><code>document.location</code>: ${protocol}//${host}${input.value}`
+  return `${protocol}//${host}/${relativePath}`
+}
+
+const showAbsoluteUrl = () => {
+  output.innerHTML = `
+    <ul>
+      <li>
+        <strong>Link trick: </strong>
+        <span>${getAbsoluteUrlLinkHack(input.value)}</span>
+      </li>
+      <li>
+        <strong>Document object: </strong>
+        <span>${getAbsoluteUrlDocument(input.value)}</span>
+      </li>
+    </ul>
+  `
 }
 
 form.addEventListener('submit', (e) => {
   e.preventDefault()
-  buildAbsoluteUrl()
+  showAbsoluteUrl()
 })
