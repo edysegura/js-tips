@@ -31,7 +31,7 @@ const showAbsoluteUrl = () => {
   `
 }
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault()
+form.addEventListener('submit', (event) => {
+  event.preventDefault()
   showAbsoluteUrl()
 })
