@@ -11,9 +11,9 @@ const getAbsoluteUrlLinkHack = (() => {
   }
 })()
 
-const getAbsoluteUrlDocument = (relativePath = '') => {
+const getAbsoluteUrlDocument = (relativePath = '/') => {
   const { protocol, host } = document.location
-  return `${protocol}//${host}/${relativePath}`
+  return `${protocol}//${host}${relativePath}`
 }
 
 const showAbsoluteUrl = () => {
