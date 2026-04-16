@@ -16,6 +16,11 @@ const getAbsoluteUrlDocument = (relativePath = '/') => {
   return `${protocol}//${host}${relativePath}`
 }
 
+const getAbsoluteUrl = (relativePath = '/') => {
+  const url = new URL(relativePath, document.location)
+  return url.href
+}
+
 const showAbsoluteUrl = () => {
   output.innerHTML = `
     <ul>
@@ -26,6 +31,10 @@ const showAbsoluteUrl = () => {
       <li>
         <strong>Document object: </strong>
         <span>${getAbsoluteUrlDocument(input.value)}</span>
+      </li>
+      <li>
+        <strong>URL constructor: </strong>
+        <span>${getAbsoluteUrl(input.value)}</span>
       </li>
     </ul>
   `
