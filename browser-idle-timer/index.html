@@ -1,14 +1,28 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Browser IDLE timer</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <p>Example on how to detect IDLE timer on your browser!</p>
-  <p id="expired-message">This session will expire in 5 seconds</p>
-  <script src="index.js" type="module"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browser IDLE timer</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <article>
+        <hgroup>
+          <h1>Browser IDLE Timer</h1>
+          <h2>Detect user inactivity</h2>
+        </hgroup>
+        <p>Example on how to detect IDLE timer on your browser!</p>
+        <section>
+          <p id="expired-message">This session will expire in 5 seconds</p>
+        </section>
+      </article>
+    </main>
+    <script src="index.js" type="module"></script>
+  </body>
 </html>
