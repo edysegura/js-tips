@@ -5,7 +5,7 @@
  */
 export function debounce(performAction, wait) {
   let timerId
-  return function (...params) {
+  return (...params) => {
     clearTimeout(timerId)
     timerId = setTimeout(() => performAction(...params), wait)
   }
