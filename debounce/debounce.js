@@ -4,12 +4,9 @@
  * @param {Number} wait Time in milliseconds to wait before perform the action
  */
 export function debounce(performAction, wait) {
-  let timer = null
+  let timerId
   return function (...params) {
-    clearTimeout(timer)
-    timer = setTimeout(
-      () => performAction(...params),
-      wait
-    )
+    clearTimeout(timerId)
+    timerId = setTimeout(() => performAction(...params), wait)
   }
 }
