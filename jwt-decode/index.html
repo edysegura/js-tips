@@ -1,14 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JWT Decode</title>
-  <script src="index.js" defer></script>
-</head>
-<body>
-  <input type="text" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c">
-  <pre></pre>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JWT Decode</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="container">
+      <article>
+        <hgroup>
+          <h1>JWT Decoder</h1>
+          <h2>Decode and view JWT token contents</h2>
+        </hgroup>
+        <label for="jwt-input">
+          JWT Token
+          <input
+            type="text"
+            id="jwt-input"
+            value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+          />
+        </label>
+        <section>
+          <strong>Decoded Token:</strong>
+          <pre></pre>
+        </section>
+      </article>
+    </main>
+  </body>
 </html>
