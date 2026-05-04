@@ -1,13 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Generate a random alpha numeric</title>
-</head>
-<body>
-  <div><button>Generate</button></div>
-  <output></output>
-  <script src="index.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generate a random alpha numeric</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+  </head>
+  <body>
+    <main class="container">
+      <article>
+        <hgroup>
+          <h1>Random Alphanumeric Generator</h1>
+          <h2>Generate random strings on demand</h2>
+        </hgroup>
+        <div>
+          <button>Generate</button>
+        </div>
+        <section>
+          <label>Generated String:</label>
+          <output></output>
+        </section>
+      </article>
+    </main>
+    <script src="index.js"></script>
+  </body>
 </html>
