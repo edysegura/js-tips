@@ -1,18 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Throttle Pattern</title>
-</head>
-<body>
-  <h1>Throttle Pattern</h1>
-  <p>A Throttle pattern is essential to ensuring a given task doesn't fire so often that it bricks browser performance.</p>
-  <input type="text" placeholder="Type something here!" autofocus>
-  <p>
-    <output></output>
-    * Press any keyboard key, it will appear here every 1 second
-  </p>
-  <script src="index.js" type="module"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Throttle Pattern</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+  </head>
+  <body>
+    <main class="container">
+      <article>
+        <hgroup>
+          <h1>Throttle Pattern</h1>
+          <h2>Limit function execution frequency</h2>
+        </hgroup>
+        <p>
+          A Throttle pattern is essential to ensuring a given task doesn't fire
+          so often that it bricks browser performance.
+        </p>
+        <label for="throttle-input">
+          Type Something
+          <input
+            type="text"
+            id="throttle-input"
+            placeholder="Type something here!"
+            autofocus
+          />
+        </label>
+        <section>
+          <strong>Output:</strong>
+          <output></output>
+          <small
+            >* Press any keyboard key, it will appear here every 1 second</small
+          >
+        </section>
+      </article>
+    </main>
+    <script src="index.js" type="module"></script>
+  </body>
 </html>
