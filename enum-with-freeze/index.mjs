@@ -1,4 +1,4 @@
-import { VanillaEnum } from './enum.mjs'
+import { VanillaEnum } from './enum-freeze.mjs'
 
 // Enum.One = 'try to assign something else' // it throws Cannot assign exception
 
