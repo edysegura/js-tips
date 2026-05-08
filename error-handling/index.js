@@ -17,4 +17,6 @@ try {
   console.log(error.message) // Whoops!
   console.log(error.name) // ValidationError
   // console.log(error.stack) // a list of nested calls with line numbers for each
+} finally {
+  console.log('Finally always runs')
 }
