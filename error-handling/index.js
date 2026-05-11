@@ -7,8 +7,19 @@ class ValidationError extends Error {
   }
 }
 
+class EmailError extends Error {
+  constructor(message) {
+    super(message)
+    this.name = 'EmailError'
+  }
+}
+
 function test() {
   throw new ValidationError('Whoops!')
+}
+
+function emailTest() {
+  throw new EmailError('Invalid email format')
 }
 
 try {
@@ -16,7 +27,13 @@ try {
 } catch (error) {
   console.log(error.message) // Whoops!
   console.log(error.name) // ValidationError
-  // console.log(error.stack) // a list of nested calls with line numbers for each
+}
+
+try {
+  emailTest()
+} catch (error) {
+  console.log(error.message) // Invalid email
+  console.log(error.name) // EmailError
 } finally {
   console.log('Finally always runs')
 }
