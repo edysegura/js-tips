@@ -14,25 +14,25 @@ class EmailError extends Error {
   }
 }
 
-function test() {
+function testValidationError() {
   throw new ValidationError('Whoops!')
 }
 
-function emailTest() {
+function testEmailError() {
   throw new EmailError('Invalid email format')
 }
 
 try {
-  test()
+  testValidationError()
 } catch (error) {
   console.log(error.message) // Whoops!
   console.log(error.name) // ValidationError
 }
 
 try {
-  emailTest()
+  testEmailError()
 } catch (error) {
-  console.log(error.message) // Invalid email
+  console.log(error.message) // Invalid email format
   console.log(error.name) // EmailError
 } finally {
   console.log('Finally always runs')
