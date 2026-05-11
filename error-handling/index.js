@@ -25,15 +25,13 @@ function testEmailError() {
 try {
   testValidationError()
 } catch (error) {
-  console.log(error.message) // Whoops!
-  console.log(error.name) // ValidationError
+  console.log(`name: ${error.name}, message: ${error.message}`)
 }
 
 try {
   testEmailError()
 } catch (error) {
-  console.log(error.message) // Invalid email format
-  console.log(error.name) // EmailError
+  console.log(`name: ${error.name}, message: ${error.message}`)
 } finally {
   console.log('Finally always runs')
 }
