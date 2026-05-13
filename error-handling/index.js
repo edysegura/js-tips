@@ -1,24 +1,24 @@
 // https://javascript.info/custom-errors
 
-class ValidationError extends Error {
+export class ValidationError extends Error {
   constructor(message) {
     super(message)
     this.name = 'ValidationError'
   }
 }
 
-class EmailError extends Error {
+export class EmailError extends Error {
   constructor(message) {
     super(message)
     this.name = 'EmailError'
   }
 }
 
-function testValidationError() {
+export function testValidationError() {
   throw new ValidationError('Whoops!')
 }
 
-function testEmailError() {
+export function testEmailError() {
   throw new EmailError('Invalid email format')
 }
 
