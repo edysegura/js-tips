@@ -7,4 +7,4 @@ const animalsSound = {
   ...(falseCondition && { cats: 'meow' }),
 }
 
-console.log({ animalsSound }) // { dogs: 'woof' }
+console.log({ animalsSound }) // { cows: 'moo', dogs: 'woof' }
